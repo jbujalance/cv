@@ -1,0 +1,236 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{pagecolor}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+\cvfirstname{José Ángel}
+\cvlastname{BUJALANCE MARTÍN}
+\profilepic{./resources/portrait.jpg} % Profile picture
+\cvjobtitle{Java Backend Developer} % Job title/career
+% \cvjobdate{\textit{December 2019}}
+\cvdate{23 October 1993} % Date of birth
+\cvaddress{13 Calle Laguna Negra \newline 28030 Madrid} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{(+34) 611 194 102} % Phone number
+\cvmail{joseabujalance \newline @hotmail.com} % Email address
+\cvnation{Spanish}
+\cvin{www.linkedin.com/in/ \newline josebujalancemartin}
+\cvgithub{www.github.com/ \newline jbujalance}
+\cvcar{European driving \newline licence B}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagecolor{background}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\languagestext{{English/C2/{100/120 TOEFL}}}
+\languagestextsingle{{Spanish/Fluent}, {French/Fluent}, {Italian/A2}}
+
+%----------------------------------------------------------------------------------------
+%	 HOBBIES
+%----------------------------------------------------------------------------------------
+
+\intereststext{{Sports/basketball, karate}, {Salsa/dancing, teaching}, {Robotics/club}, {Android/development}}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+%\skills{{pursuer of rabbits/5.8},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 6
+%\skillstext{{lovely/4},{narcissistic/3}}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 TITLE
+%----------------------------------------------------------------------------------------
+
+
+{\Huge\color{darkblue}\textbf{\cvjobtitle}}
+%\begin{flushright}
+
+%{\large\color{black}\cvjobdate}
+%\end{flushright}
+
+%----------------------------------------------------------------------------------------
+%	 SUMMARY
+%----------------------------------------------------------------------------------------
+
+\vspace{3mm}
+
+Full stack developer with experience in web and mobile applications development following the Agile methodology.
+I am more attracted to the backend than the frontend, and I have had the opportunity to participate in every level of the development,
+from conception to deployment. Java is my comfort zone, and I value the clarity, legibility and maintainability of the code.
+
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\vspace{3mm}
+
+\section{Professional experience}
+
+\begin{twenty} % Environment for a list with descriptions
+
+	\twentyitem{July 2017}{Full-stack developer at Praxedo}{Paris and Madrid}{
+        Conception, development and maintenance of a multi-platform Field Service Management application in an Agile team of 5-7 developers.\\
+        Technical support and bug fix (N3 and N4).\\
+        Role of tech lead in the team.
+    }
+    \twentyitemskill{}{
+        \cvtag{Java EE} \cvtag{Javascript} \cvtag{JUnit} \cvtag{Struts} \cvtag{Hibernate} \cvtag{SQL}
+        \cvtag{Spring} \cvtag{JAX-WS} \cvtag{YUI} \cvtag{Tomcat} \cvtag{Jenkins} \cvtag{Scrum}
+        \cvtag{TDD} \cvtag{Ansible} \cvtag{JMockit} \cvtag{Mockito}
+    }{}{}
+	
+	\twentyitem{Jan-Jul 2017}{Internship at Praxedo}{Paris}{
+        Development of a routing engine in Java.\\
+        Manipulation and integration of geolocation big data.
+    }
+    \twentyitemskill{}{
+        \cvtag{Java} \cvtag{Spring Boot} \cvtag{REST API} \cvtag{Maven} \cvtag{Hadoop}
+    }{}{}
+
+    \twentyitem{Summer 2016}{Intern researcher at Walailak University}{Thailand}{
+        Development of Virtual Reality applications related to the manufacturing industry using Unity 3D and C\#.
+    }
+    \twentyitemskill{}{
+        \cvtag{C\#} \cvtag{Unity3D} \cvtag{Android}
+    }{}{}
+
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\vspace{3mm}
+
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+
+	\twentyitem{2016-2017}{Industrial Engineering at Ryerson University}{Toronto}{
+        Last semester of the Industrial Engineering degree.\\Introductory course to Big Data analysis and the Hadoop framework.
+    }
+
+	\twentyitem{2014-2017}{Industrial Engineering at Grenoble INP}{Grenoble}{Specialization in Product Engineering}
+
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\section{Publications}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+%	\twentyitemshort{1865}{Chapter One, Down the Rabbit Hole.}
+%	\twentyitemshort{1865}{Chapter Two, The Pool of Tears.}
+	%\twentyitemshort{1865}{Chapter Three,  The Caucus Race and a Long Tale.}
+	%\twentyitemshort{1865}{Chapter Four,  The Rabbit Sends a Little Bill.}
+	%\twentyitemshort{1865}{Chapter Five,  Advice from a Caterpillar.}
+	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+%\section{Awards}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+	%\twentyitemshort{1987}{All-Time Best Fantasy Novel.}
+	%\twentyitemshort{1998}{All-Time Best Fantasy Novel before 1990.}
+	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+% \section{Experience}
+
+% \begin{twenty} % Environment for a list with descriptions
+% 	\twentyitem{1900}{Alice in Wonderland-The Circra (1900's) Silent Film.}{Film}{The first Alice on film was over a hundred years ago.}
+% 	\twentyitem{1933}{Alice in Wonderland 1933 version.}{Film}{This film stars Ethel griffies and Charlotte Henry. It was a box office flop when it was released.}
+% 	\twentyitem{1951}{Disney Film.}{Film}{Walt Disney brings Lewis Carroll's fantasy story to life in this well done animated classic. Even though many elements from the book were dropped, such as the duchess with the baby pig and mock turtle, this version is without a doubt the most famous Alice adaption made.}
+% 	\twentyitem{<dates>}{<title>}{<location>}{<description>}
+% \end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\makeprofile % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 

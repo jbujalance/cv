@@ -27,6 +27,9 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
+
+\usetikzlibrary{calc}
+
 %----------------------------------------------------------------------------------------
 %	 COLOURS
 %----------------------------------------------------------------------------------------
@@ -35,9 +38,10 @@
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{mainblue}{HTML}{0E5484}
-%\definecolor{darkblue}{HTML}{36486B}
+\definecolor{darkblue}{HTML}{36486B}
 \definecolor{maingray}{HTML}{B9B9B9}
 \definecolor{black}{RGB}{0,0,0}
+\definecolor{background}{RGB}{245,246,247}
 \colorlet{body}{black!80!white}
 
 
@@ -94,7 +98,8 @@
 
 
 % Command for printing the contact information icons
-\newcommand*\icon[1]{\tikz[baseline=char.base]{\node[shape=circle,draw,inner sep=0.1pt, fill=mainblue,mainblue,text=white, minimum size=0.7cm, maximum size=0.7cm] (char) {#1};}}
+\newcommand*\icon[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 \newcommand{\divider}{\textcolor{black!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}}
 
@@ -171,13 +176,13 @@
 		
 		%------------------------------------------------
 		\begin{center}
-			{\Large\color{black}\cvfirstname}
+			{\Large\color{mainblue}\textbf{\cvfirstname}}
 		\end{center}
 
 		\vspace{1mm}
 
 		\begin{center}
-			{\Large\color{black}\cvlastname}
+			{\Large\color{mainblue}\textbf{\cvlastname}}
 		\end{center}
 
 		\vspace{4mm}
@@ -263,50 +268,21 @@
 %	 COLOURED SECTION TITLE BOX
 %----------------------------------------------------------------------------------------
 
-% Command to create the rounded boxes around the first three letters of section titles
-\newcommand*\round[2]{%
-	\tikz[baseline]\node[anchor=base, draw,rectangle, rounded corners, inner sep=2pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
+% Command to create the rounded boxes around the section titles
+\newcommand*\round[2]{
+	\tikz[baseline]\node[anchor=base, draw, rectangle, rounded corners, inner sep=5pt, minimum size=8mm, text height=5mm, fill=#2,#2,text=white](char){#1};%
 }
 
-\newcounter{colorCounter}
-\newcommand{\sectioncolor}[1]{%
-	{%
-		%\round{#1}{
-		%	\ifcase\value{colorCounter}%
-		%	maingray\or%
-		%	mainblue\or%
-		%	maingray\or%
-		%	mainblue\or%
-		%	maingray\or%
-		%	mainblue\or%
-		%	maingray\or%
-		%	mainblue\or%
- 		%	maingray\or%
-		%	mainblue\else%
-		%	maingray\fi%
-		%}%
-		\round{#1}{
-			%\ifcase\value{colorCounter}%
-			mainblue%\or%
-			%mainblue\or%
-			%mainblue\or%
-			%mainblue\or%
-			%mainblue\or%
-			%mainblue\or%
-			%maingray\or%
-			%mainblue\or%
- 			%maingray\or%
-			%mainblue\else%
-			%maingray\fi%
-		}%
-	}%
-	%\stepcounter{colorCounter}%
+\newcommand{\sectioncolor}[1]{
+	{
+		\round{#1}{mainblue}
+	}
 }
 
 \renewcommand{\section}[1]{
-	{%
-		\color{gray}%
-		\Large\sectioncolor{#1}%
+	{
+		\color{gray}
+		\Large\sectioncolor{#1}
 	}
 }
 
@@ -342,7 +318,7 @@
 
 \newcommand{\twentyitem}[4]{
 	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{\large#2}%
+		\textcolor{darkblue}{\textbf{\Large#2}}%
 		\hfill%
 		{\it\color{gray}{#3}}\\%
 		\large#4\vspace{\parsep}%
