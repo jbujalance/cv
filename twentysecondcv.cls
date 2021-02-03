@@ -243,7 +243,7 @@
 		
 		\vspace{2mm}
 
-		\profilesection{Hobbies}
+		%\profilesection{Hobbies}
 
 		\vspace{2mm}
 
@@ -309,7 +309,7 @@
 
 \newcommand{\twentyitemskill}[4]{\large
 	#1&\parbox[t]{0.75\textwidth}{%
-		{\bf\large#2}%
+		{\bf\normalsize#2}%
 		\hfill%
 		{\footnotesize#3}\\%
 		#4\vspace{\parsep}%
@@ -321,7 +321,7 @@
 		\textcolor{darkblue}{\textbf{\Large#2}}%
 		\hfill%
 		{\it\color{gray}{#3}}\\%
-		\large#4\vspace{\parsep}%
+		\normalsize#4\vspace{\parsep}%
 	}\\
 }
 
