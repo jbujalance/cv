@@ -217,6 +217,7 @@
             \textsc{\Large\icon{\faGlobe}} & \cvnation\\
             \textsc{\Large\icon{\faLinkedin}} & \cvin\\
             \textsc{\Large\icon{\faGithub}} & \cvgithub\\
+			\textsc{\Large\icon{\faUser}} & \cvsite\\
         \end{tabulary}
         \end{table}
 
